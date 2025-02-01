@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# 编译生成的目录
+build/
+bin/
