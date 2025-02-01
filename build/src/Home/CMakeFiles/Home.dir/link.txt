@@ -1,0 +1,3 @@
+D:\GCC_CMake\CMake\bin\cmake.exe -E rm -f CMakeFiles\Home.dir/objects.a
+D:\GCC_CMake\Mingw-GCC\bin\ar.exe qc CMakeFiles\Home.dir/objects.a @CMakeFiles\Home.dir\objects1.rsp
+D:\GCC_CMake\Mingw-GCC\bin\g++.exe -g -shared -o D:\ProgrammingCXX\CMakeProgrammingCXX\bin\libHome.dll -Wl,--out-implib,libHome.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\Home.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\Home.dir\linkLibs.rsp

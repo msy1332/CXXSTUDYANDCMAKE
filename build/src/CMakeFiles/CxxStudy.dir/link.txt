@@ -1,0 +1,3 @@
+D:\GCC_CMake\CMake\bin\cmake.exe -E rm -f CMakeFiles\CxxStudy.dir/objects.a
+D:\GCC_CMake\Mingw-GCC\bin\ar.exe qc CMakeFiles\CxxStudy.dir/objects.a @CMakeFiles\CxxStudy.dir\objects1.rsp
+D:\GCC_CMake\Mingw-GCC\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\CxxStudy.dir/objects.a -Wl,--no-whole-archive -o D:\ProgrammingCXX\CMakeProgrammingCXX\bin\CxxStudy.exe -Wl,--out-implib,libCxxStudy.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CxxStudy.dir\linkLibs.rsp

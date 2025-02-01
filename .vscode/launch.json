@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Build",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/CxxStudy", // 替换为你的生成目标
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                { "name": "LANG", "value": "zh_CN.UTF-8" } // 设置语言环境为UTF8
+            ],
+            "externalConsole": true,
+            "MIMode": "gdb", // 或者 "lldb" 或 "cppvsdbg"
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

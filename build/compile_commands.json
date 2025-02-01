@@ -1,0 +1,14 @@
+[
+{
+  "directory": "D:/ProgrammingCXX/CMakeProgrammingCXX/build/src",
+  "command": "D:\\GCC_CMake\\Mingw-GCC\\bin\\g++.exe  @CMakeFiles/CxxStudy.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\CxxStudy.dir\\HomeMain.cpp.obj -c D:\\ProgrammingCXX\\CMakeProgrammingCXX\\src\\HomeMain.cpp",
+  "file": "D:/ProgrammingCXX/CMakeProgrammingCXX/src/HomeMain.cpp",
+  "output": "src/CMakeFiles/CxxStudy.dir/HomeMain.cpp.obj"
+},
+{
+  "directory": "D:/ProgrammingCXX/CMakeProgrammingCXX/build/src/Home",
+  "command": "D:\\GCC_CMake\\Mingw-GCC\\bin\\g++.exe -DHome_EXPORTS  -g -std=gnu++11 -o CMakeFiles\\Home.dir\\Home_Class.cpp.obj -c D:\\ProgrammingCXX\\CMakeProgrammingCXX\\src\\Home\\Home_Class.cpp",
+  "file": "D:/ProgrammingCXX/CMakeProgrammingCXX/src/Home/Home_Class.cpp",
+  "output": "src/Home/CMakeFiles/Home.dir/Home_Class.cpp.obj"
+}
+]

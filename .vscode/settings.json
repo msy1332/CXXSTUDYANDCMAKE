@@ -1,0 +1,21 @@
+/*{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "new": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp"
+    }
+}*/
+{
+    //"terminal.integrated.fontFamily": "Consolas",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.profiles.windows": {
+        "Command Prompt": {
+            "path": "C:\\Windows\\System32\\cmd.exe",
+            "args": ["/K", "chcp 65001"] // 设置终端编码为 UTF-8
+        }
+    },
+    "files.associations": {
+        "iostream": "cpp"
+    }
+}
