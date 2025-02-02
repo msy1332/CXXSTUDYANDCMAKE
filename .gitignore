@@ -31,6 +31,8 @@
 *.out
 *.app
 
-# 编译生成的目录
-build/
-bin/
+# build
+/build
+
+# bin
+/bin
