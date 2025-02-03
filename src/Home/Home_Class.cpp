@@ -3,14 +3,14 @@
 #include <windows.h>
 #include <string>
 using namespace std;
-Home_Show::Home_Show()//构造函数
+Home_Show::Home_Show(int Menu_NUM)//构造函数
 {
-    
+    this->Menu_NUM=Menu_NUM;
 }
 
 Home_Show::~Home_Show()//析构函数
 {
-    
+
 }
 
 int Home_Show::Menu_SWitch()//菜单选择
@@ -18,7 +18,9 @@ int Home_Show::Menu_SWitch()//菜单选择
     switch(this->Menu_SWitch_Please_Select)
     {
         case 1:
+            system("cls");
             cout<<"1.C++ Variables, constants and data types";//c++变量，常量和数据类型
+            Cxx_Knowledge_Point_1.Secondary_menu_description();
             goto Enter_correctly;
             break;
         case 2:
@@ -77,12 +79,19 @@ int Home_Show::Menu_SWitch()//菜单选择
 
 void Home_Show::Home_Draw()//绘制主界面
 {
+    /*
     cout<<"\t\t\t\t\t"<<"[Mski]Welcome"<<endl<<endl;
     cout<<"\t\t"<<"#           #    ######     #    #####     #####     #####     ###### "<<endl;
     cout<<"\t\t"<<" #         #    #      #    #   #     #   #     #   #  #  #   #      # "<<endl;
     cout<<"\t\t"<<"  #   #   #     ########    #   #         #     #   #  #  #   ########  "<<endl;
     cout<<"\t\t"<<"   # # # #      #           #   #     #   #     #   #  #  #   #  "<<endl;
     cout<<"\t\t"<<"    #   #        ######     #    #####     #####    #  #  #    ###### "<<endl;
+    */
+    cout<<"\t\t\t\t\t"<<STRTEXT[0].welcome<<endl;
+    for(int i=1;i<=5;i++)
+    {
+        cout<<"\t\t"<<STRTEXT[i].welcome<<endl;
+    }
 }   
 
 void Home_Show::Explain_Menu()//二级菜单说明
@@ -120,7 +129,7 @@ void Home_Show::Menu_Init()//菜单的初始化
 }
 
 
-int Judgment(Home_Show *menu)//判断是否跳过菜单
+int Home_Show::Judgment(Home_Show *menu)//判断是否跳过菜单
 {
     if(menu->Menu_SWitch_NUM==0)//判断是Menu_SWitch_NUM是否为空，如果为空就跳过菜单，否则不跳过菜单
     {
@@ -135,5 +144,11 @@ int Judgment(Home_Show *menu)//判断是否跳过菜单
 
 void Home_Show::Home_Init()//主界面的初始化
 {
-    STRTEXT[0].welcome="";
+    STRTEXT[0].welcome="[Mski]Welcome";
+    STRTEXT[1].welcome="#           #    ######     #    #####     #####     #####     ###### ";
+    STRTEXT[2].welcome=" #         #    #      #    #   #     #   #     #   #  #  #   #      # ";
+    STRTEXT[3].welcome="  #   #   #     ########    #   #         #     #   #  #  #   ########  ";
+    STRTEXT[4].welcome="   # # # #      #           #   #     #   #     #   #  #  #   #  ";
+    STRTEXT[5].welcome="    #   #        ######     #    #####     #####    #  #  #    ###### ";
 }
+//MGAPPDownload20250203.

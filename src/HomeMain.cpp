@@ -5,15 +5,15 @@ using namespace std;
 int main()
 {
     //system("mode con: cols=800 lines=800");
-    Home_Show *show= new Home_Show;
-    show->Home_Draw();//画主界面
+    Home_Show *show= new Home_Show(12);//设置菜单的显示数量
+    show->Menu_Init();//菜单的初始化
+    show->Home_Init();//主界面的初始化
+    show->Home_Draw();//画主界面    
     cin.get();//按任意键继续
     system("cls");//清屏
-    show->Menu_Init();
-    show->Menu_NUM=12;
     while(1)//主循环
     {
-        if(Judgment(show)==1)
+        if(show->Judgment(show)==1)//判断是否跳过菜单
         {
             Input_error://请重新输入
             show->Menu_Draw_Cin();//菜单的输入与绘制

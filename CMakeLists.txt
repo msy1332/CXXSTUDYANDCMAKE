@@ -14,6 +14,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 #PROJECT_BINARY_DIR根目录
 
 set(Home_Dir ${CMAKE_SOURCE_DIR}/src/Home)
+set(Cxx_Knowledge_Point_1_Dir ${CMAKE_SOURCE_DIR}/src/C++_Knowledge_Point_1)
 #设置变量，把${CMAKE_SOURCE_DIR}/src/Home目录设置成变量为Home_Dir
 #CMAKE_SOURCE_DIR整个项目的根目录
 

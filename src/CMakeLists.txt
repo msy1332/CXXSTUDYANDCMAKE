@@ -2,6 +2,7 @@ project(HomeMain)#指定工程名
 
 #添加子目录
 add_subdirectory(Home)
+add_subdirectory(C++_Knowledge_Point_1)
 #add_subdirectory添加子目录,会找Home目录下的CMAKeListx
 
 add_executable(CxxStudy HomeMain.cpp)
