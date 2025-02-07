@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
-struct StringNUM
+struct StringNUM_Home
 {
         string str_TEXT;
         string welcome;
@@ -23,7 +23,8 @@ class  Home_Show
     private:
         int Menu_SWitch_Please_Select=0;
         Cxx_Knowledge_Point_1 Cxx_Knowledge_Point_1;
-        StringNUM STRTEXT[100];
+        StringNUM_Home STRTEXT[100];
+        bool Judgment_BOOL=true;
         //Home_Show::StringNUM Home_Show::STRTEXT[100];
     protected:
         int Menu_SWitch_NUM=0;//可以跳过菜单

@@ -18,7 +18,7 @@ int main()
             Input_error://请重新输入
             show->Menu_Draw_Cin();//菜单的输入与绘制
             show->Menu_SWitch();//菜单的选择
-            if(show->Menu_SWitch()==0)
+            if(show->Menu_SWitch()==0||show->Menu_SWitch()==1)
             {
                 system("cls");
                 goto Input_error;//输入错误，请重新输入
