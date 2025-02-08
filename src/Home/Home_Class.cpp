@@ -3,9 +3,12 @@
 #include <windows.h>
 #include <string>
 using namespace std;
-Home_Show::Home_Show(int Menu_NUM)//构造函数
+Home_Show::Home_Show(int Menu_NUM,bool Skip_Menu)//构造函数
 {
     this->Menu_NUM=Menu_NUM;
+    //将菜单的数量存入成员变量Menu_NUM
+    this->Skip_Menu=Skip_Menu;
+    //将用来判断是否跳过菜单的Bool变量存入成员变量Skip_Menu
 }
 
 Home_Show::~Home_Show()//析构函数
@@ -13,14 +16,14 @@ Home_Show::~Home_Show()//析构函数
 
 }
 
-int Home_Show::Menu_SWitch()//菜单选择
+int Home_Show::Menu_SWitch()//菜单的判断
 {
     switch(this->Menu_SWitch_Please_Select)
     {
         case 1:
             system("cls");
-            //cout<<"1.C++ Variables, constants and data types";//c++变量，常量和数据类型
             Cxx_Knowledge_Point_1.Secondary_menu_description();
+            //cout<<"1.C++ Variables, constants and data types";//c++变量，常量和数据类型
             //Judgment_BOOL=false;
             // cin.get();
             break;
@@ -69,21 +72,22 @@ int Home_Show::Menu_SWitch()//菜单选择
             
             break;
         default:
-            cout<<"Input error, please re-enter";//输入错误，请重新输入
-            Judgment_BOOL=false;
+            //cout<<"Input error, please re-enter";//输入错误，请重新输入
+            Judgment_BOOL=FALSE;
+            break;
     }
-    if(Judgment_BOOL)
+    if(Judgment_BOOL)//如果Judgment_BOOL为TRUE则返回TRUE正常输入
     {
         return 1;
     }
     else
-    {   if(Menu_SWitch_Please_Select=Menu_NUM+1)
+    {   if(Menu_SWitch_Please_Select=Menu_NUM+1)//如果Menu_SWitch_Please_Select等于Menu_NUM+1也就是退出则返回-1
         {
-            return -1;
+            return -1;//返回-1
         }
         else
         {
-            return 0;
+            return 0;//否则返回FALSE输入错误
         }
     }
 }
@@ -105,10 +109,7 @@ void Home_Show::Home_Draw()//绘制主界面
     }
 }   
 
-void Home_Show::Explain_Menu()//二级菜单说明
-{
-    
-}
+
 
 void Home_Show::Menu_Draw_Cin()//菜单的绘制与输入
 {
@@ -144,13 +145,13 @@ void Home_Show::Menu_Init()//菜单的初始化
 
 int Home_Show::Judgment(Home_Show *menu)//判断是否跳过菜单
 {
-    if(menu->Menu_SWitch_NUM==0)//判断是Menu_SWitch_NUM是否为空，如果为空就跳过菜单，否则不跳过菜单
+    if(menu->Skip_Menu==FALSE)//判断Skip_Menu为FALSE返回TRUE不跳过菜单，否则返回FALSE跳过菜单
     {
-        return 1;
+        return TRUE;//跳过菜单
     }
     else
     {
-        return 0;
+        return FALSE;//不跳过菜单
     }
 }
 
@@ -164,4 +165,8 @@ void Home_Show::Home_Init()//主界面的初始化
     STRTEXT[4].welcome="   # # # #      #           #   #     #   #     #   #  #  #   #  ";
     STRTEXT[5].welcome="    #   #        ######     #    #####     #####    #  #  #    ###### ";
 }
-//MGAPPDownload20250203.
+
+// void Home_Show::Explain_Menu()//二级菜单说明
+// {
+    
+// }

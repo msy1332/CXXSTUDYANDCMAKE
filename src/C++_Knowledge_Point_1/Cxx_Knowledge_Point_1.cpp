@@ -105,7 +105,7 @@ int Cxx_Knowledge_Point_1::The_selection_and_judgment_of_the_secondary_menu()
             }*/
             Variables();
             //cin.get();
-            if(cin.get())
+            if(system("pause"))
             {
                 //Judgment_BOOL=false;
                 break;
