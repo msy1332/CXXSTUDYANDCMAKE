@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     //system("mode con: cols=800 lines=800");
-    Home_Show *show= new Home_Show(12,FALSE);//设置菜单的显示数量
+    Home_Show *show= new Home_Show(12,false);//设置菜单的显示数量
     show->Menu_Init();//菜单的初始化
     show->Home_Init();//主界面的初始化
     show->Home_Draw();//画主界面    
@@ -14,18 +14,23 @@ int main()
     system("cls");//清屏
     while(1)//主循环
     {
-        if(show->Judgment(show)==TRUE)//判断是否跳过菜单
+        if(show->Judgment(show)==true)//判断是否不跳过菜单
         {
             // Input_error://请重新输入
             show->Menu_Draw_Cin();//菜单的输入与绘制
             show->Menu_SWitch();//菜单的选择
-            if(show->Menu_SWitch()==0||show->Menu_SWitch()==1)//输入错误或正常退出
+            if(show->Menu_SWitch()==0)//输入错误或正常退出
             {
                 system("cls");
                 continue;
                 // show->Menu_Draw_Cin();//菜单的输入与绘制
                 // show->Menu_SWitch();//菜单的选择
                 // goto Input_error;//输入错误，请重新输入
+            }
+            else if(show->Menu_SWitch()==1)
+            {
+                system("cls");
+                continue;
             }
             else
             {

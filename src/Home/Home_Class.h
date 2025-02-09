@@ -1,6 +1,19 @@
+#pragma once
 #include "Cxx_Knowledge_Point_1.h"//包含知识点一头文件
 #include <string>//包含字符串头文件
 #include <iostream>//包含输入输出流头文件
+// #define Input_Error 0;//错误退出
+// #define Normal_Exit 1;//正常退出
+// #define Exit_Procedure -1;//退出程序
+//菜单的状态
+
+// enum Status_Of_Menu=
+// {
+//     Input_Error=0;//错误退出
+//     Normal_Exit=1;//正常退出
+//     Exit_Procedure=-1;//退出程序
+// };
+
 using namespace std;////使用命名空间
 struct StringNUM_Home//定义存主菜单的字符串
 {
@@ -44,7 +57,7 @@ class  Home_Show//创建Home_Show类
         //菜单输入的变量  
         StringNUM_Home STRTEXT[100];
         //定义了一个结构体变量数组STRTEXT
-        bool Judgment_BOOL=true;
+        int Status_Of_Menu=1;
         //菜单状态的判断
         Cxx_Knowledge_Point_1 Cxx_Knowledge_Point_1;
         //定义了一个类变量Cxx_Knowledge_Point_1

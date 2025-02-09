@@ -73,15 +73,16 @@ int Home_Show::Menu_SWitch()//菜单的判断
             break;
         default:
             //cout<<"Input error, please re-enter";//输入错误，请重新输入
-            Judgment_BOOL=FALSE;
+            Status_Of_Menu=0;
             break;
     }
-    if(Judgment_BOOL)//如果Judgment_BOOL为TRUE则返回TRUE正常输入
+    if(Status_Of_Menu==1)//如果Judgment_BOOL为TRUE则返回TRUE正常输入
     {
+        // return Normal_Exit;
         return 1;
     }
     else
-    {   if(Menu_SWitch_Please_Select=Menu_NUM+1)//如果Menu_SWitch_Please_Select等于Menu_NUM+1也就是退出则返回-1
+    {   if(Menu_SWitch_Please_Select==Menu_NUM+1)//如果Menu_SWitch_Please_Select等于Menu_NUM+1也就是退出则返回-1
         {
             return -1;//返回-1
         }
@@ -145,13 +146,13 @@ void Home_Show::Menu_Init()//菜单的初始化
 
 int Home_Show::Judgment(Home_Show *menu)//判断是否跳过菜单
 {
-    if(menu->Skip_Menu==FALSE)//判断Skip_Menu为FALSE返回TRUE不跳过菜单，否则返回FALSE跳过菜单
+    if(menu->Skip_Menu==false)//判断Skip_Menu为FALSE返回TRUE不跳过菜单，否则返回FALSE跳过菜单
     {
-        return TRUE;//跳过菜单
+        return true;//不跳过菜单
     }
     else
     {
-        return FALSE;//不跳过菜单
+        return false;//跳过菜单
     }
 }
 
