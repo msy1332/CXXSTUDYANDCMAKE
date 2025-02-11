@@ -19,7 +19,7 @@ class Cxx_Knowledge_Point_1
         StringNUM StringMenuText[10];//菜单的字符串
         bool Judgment_BOOL=true;
         int Secondary_menu_description_Please_Select_Switch_NUM;//二级菜单选择
-        int Secondary_menu_description_Menu_NUM;//二级菜单的数量
+        int Secondary_menu_description_Menu_NUM=1;//二级菜单的数量
         int Variables();
     protected:
 };

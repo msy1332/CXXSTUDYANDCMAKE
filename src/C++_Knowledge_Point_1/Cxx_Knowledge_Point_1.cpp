@@ -6,19 +6,31 @@ void Cxx_Knowledge_Point_1::Secondary_menu_description()//二级菜单说明
     Secondary_menu_description_Init();
     Secondary_menu_description_Menu_NUM=1;
     //Input_error:
-    Secondary_menu_description_Draw();
     while(1)
     {
+        Secondary_menu_description_Draw();
         int The_selection_and_judgment_of_the_secondary_menu_return=The_selection_and_judgment_of_the_secondary_menu();
-        if(The_selection_and_judgment_of_the_secondary_menu_return==0||The_selection_and_judgment_of_the_secondary_menu_return==1)
+        // cout<<endl<<The_selection_and_judgment_of_the_secondary_menu_return;
+        // system("pause");
+        if(The_selection_and_judgment_of_the_secondary_menu_return==0)//输入错误或正常退出
+        {
+            cout<<Secondary_menu_description_Please_Select_Switch_NUM<<" "<<Secondary_menu_description_Menu_NUM+1<<endl;
+            if(Secondary_menu_description_Please_Select_Switch_NUM==Secondary_menu_description_Menu_NUM+1)
+            {
+                break;
+            }
+            else
+            {
+                system("cls");
+                continue;
+            }
+        }
+        else if(The_selection_and_judgment_of_the_secondary_menu_return==1)
         {
             system("cls");
-            Secondary_menu_description_Draw();
+            continue;
         }
-        else
-        {
-            break;
-        }
+                
     }
     // The_selection_and_judgment_of_the_secondary_menu();
     // if(The_selection_and_judgment_of_the_secondary_menu()==0)
@@ -108,14 +120,16 @@ int Cxx_Knowledge_Point_1::The_selection_and_judgment_of_the_secondary_menu()
             if(system("pause"))
             {
                 //Judgment_BOOL=false;
+                // return 1;
                 break;
             }
             //
         // case 2:
-        //     return -1;
+            // return -1;
         default:
-            cout<<"Input error, please re-enter";//输入错误，请重新输入
+            // cout<<"Input error, please re-enter";//输入错误，请重新输入
             Judgment_BOOL=false;
+            // return 0;
             break;
     }
     if(Judgment_BOOL)
@@ -123,14 +137,16 @@ int Cxx_Knowledge_Point_1::The_selection_and_judgment_of_the_secondary_menu()
         return 1;
     }
     else
-    {   if(Secondary_menu_description_Please_Select_Switch_NUM==Secondary_menu_description_Menu_NUM+1)
-        {
-            return -1;
-        }
-        else
-        {
+    {
+    // {   if(Secondary_menu_description_Please_Select_Switch_NUM==2)//Secondary_menu_description_Menu_NUM+1
+    //     {
+    //         return -1;
+    //     }
+    //     else
+    //     {
+    //         return 0;
+    //     }
             return 0;
-        }
     }
 }
 
